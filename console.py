@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import cmd
-from models.base_model import BaseModel
 """ entry point of command interpreter """
 
 
