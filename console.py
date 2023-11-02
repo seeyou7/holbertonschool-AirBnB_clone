@@ -11,7 +11,7 @@ class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb)'
 
     def do_quit(self, arg):
-        """ to exit the cmd line interpreter """
+        """ Quit command to exit the program """
         return True
 
     def do_EOF(self, arg):
