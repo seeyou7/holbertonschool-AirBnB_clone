@@ -5,16 +5,16 @@ import models
 import json
 from os import path
 from models.base_model import BaseModel
+from models.user import User
 
 
 class FileStorage:
     """ class to serialize instance to json and deserialize
         json file to instance
     """
-    
+
     __file_path = "file.json"
     __objects = {}
-
 
     def all(self):
         """ Returns the dictionary __objects """
@@ -45,5 +45,5 @@ class FileStorage:
                 jo = json.load(f)
             for key in jo:
                 self.__objects[key] = classes[jo[key]["__class__"]](**jo[key])
-        except:
+        except FileNotFoundError:
             pass
