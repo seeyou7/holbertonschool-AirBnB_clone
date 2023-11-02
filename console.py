@@ -10,11 +10,11 @@ class HBNBCommand(cmd.Cmd):
 
     prompt = '(hbnb)'
 
-    def quit(self, arg):
+    def do_quit(self, arg):
         """ to exit the cmd line interpreter """
         return True
 
-    def EOF(self, arg):
+    def do_EOF(self, arg):
         """ exit the l.cmd using cntrl D """
         print()
         return True
